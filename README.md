@@ -67,6 +67,9 @@ Passive features included by default:
 - Scroll down and at last paste this line just before the end tags of the xml file (i.e, </application></manifest>) 
 PASTE THIS - <service android:name="heaven.on.fire.MenuService" android:enabled="true" android:exported="false"/>
 
+
+
+
 ## Running the menu
 - Install the apk
 - Accept draw over app permission
