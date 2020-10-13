@@ -1,8 +1,9 @@
 # Among Us Mod Menu
-Mod menu for Among Us on Android
-All features except for force impostor work without being the host and is visible to other clients in the game.
+Mod menu for Among Us For Android
 
-Official Post: https://polarmods.com/threads/among-us-imposter-modmenu-for-android-arm64-teleport-freeze-attach-kick-and-more.951/#post-28402
+You cannot be the Imposter unless you are the host of the match.
+
+Hacks Provides :-
 
 Self
 - Fake Impostor
@@ -55,20 +56,20 @@ Passive features included by default:
 - See Ghosts
 - No Ads
 
-A short demo: https://www.youtube.com/watch?v=zrc_FMnWyRM&feature=youtu.be
-
 ## Injecting Menu
-- Compile the menu in android studio or download the release build.
-- Install apktool version 2.4.1 (or you may have issues when compiling the apk back)
-- Edit inject-apk.sh with path to amongus apk, the menu build and a keystore if you want the script to sign the build for you.
-- run ./inject-apk.sh
-- This will output an injected version of the game.
+- Compile the a source code and make the apk. Else download the latest prebuild apk.
+- Download the real apk and decompile the dex of both the real and this mod apk.
+- Copy all smali folders from this mod apk and paste in the real smali folders.
+- Navigate to the main activity - com.unity3d.player.UnityPlayerActivity
+- Edit "UnityPlayerActivity" and search for requestFocus()
+- On the very next line paste this code - "Lheaven/on/fire/MenuMain;->initModMenu(Landroid/content/Context;)V" and then save it.
+- Edit AndroidManifest.xml and add this code in the uses permission section - <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+- Scroll down and at last paste this line just before the end tags of the xml file (i.e, </application></manifest>) PASTE THIS - 
+ <service android:name="heaven.on.fire.MenuService" android:enabled="true" android:exported="false"/>
 
 ## Running the menu
 - Install the apk
 - Accept draw over app permission
-- close app and clear task
-- Tap the app icon 2 to 3 times, this is because its loading the base address of the game library.
 - If all goes well, you should see the menu now.
 
 ## Credits
