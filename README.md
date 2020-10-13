@@ -79,3 +79,5 @@ Note - Give the opening and closing tags of the permission and service section
 - Devilx86
 - Rprop And64InlineHook
 - Cydia Substrate
+
+FOR RELEASED APK PING ME ON TELEGRAM - @Ascarre and join my channel - @ashopetech
