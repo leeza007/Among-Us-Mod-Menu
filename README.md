@@ -63,10 +63,11 @@ Passive features included by default:
 - Navigate to the main activity - com.unity3d.player.UnityPlayerActivity
 - Edit "UnityPlayerActivity" and search for requestFocus()
 - On the very next line paste this code - "Lheaven/on/fire/MenuMain;->initModMenu(Landroid/content/Context;)V" and then save it.
-- Edit AndroidManifest.xml and add this code in the uses permission section - <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+- Edit AndroidManifest.xml and add this code in the uses permission section - uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"
 - Scroll down and at last paste this line just before the end tags of the xml file (i.e, </application></manifest>) 
-- PASTE THIS - <service android:name="heaven.on.fire.MenuService" android:enabled="true" android:exported="false"/>
+- PASTE THIS - service android:name="heaven.on.fire.MenuService" android:enabled="true" android:exported="false"
 
+Note - Give the opening and closing tags of the permission and service section
 
 
 ## Running the menu
